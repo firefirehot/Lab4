@@ -78,26 +78,26 @@ void Tick()
         break;
 
 	case INCTRANS:
+		if(ucOutput < 9)
+                	ucOutput = ucOutput + 1;
         break;
 	
 	case DECTRANS:
+	        if(ucOutput > 0)
+               		 ucOutput = ucOutput - 1 ;
 	break;
 	
 	case RESETTRANS:
+	ucOutput = 0;
 	break;
 
 	case INC:
-	if(ucOutput < 9)
-		ucOutput = ucOutput + 1;
 	break;
 
 	case DEC:
-	if(ucOutput > 0)
-		ucOutput = ucOutput - 1 ;
 	break;
 
 	case RESET:
-	ucOutput = 0;
 	break;
 
 	default:

@@ -28,7 +28,7 @@ void Tick()
      case CENTER:
 	if(PINA == 0x04)
 		state = POUNDTRANS;
-	else if(PINA == 0x07)
+	else if(PINA == 0x08)
 		state = LOCKTRANS;
 	else
 		state = CENTER;
@@ -56,7 +56,7 @@ void Tick()
 	case POUND:
 		if(PINA == 0x00)
 			state = POUND;
-		else if(PINA == 0x02)
+		else if(PINA == 0x80)
 			state = PRESSYTRANS;
 		else 
 			state = CENTER;
@@ -81,20 +81,20 @@ void Tick()
         break;
 	
 	case PRESSYTRANS:
+	PORTB = 0x01;
 	break;
 	
 	case LOCKTRANS:
+	PORTB = 0x00;
 	break;
 
 	case POUND:
 	break;
 
 	case PRESSY:
-	PORTB = 0x01;
 	break;
 
 	case LOCK:
-	PORTB = 0x00;
 	break;
 
 	default:

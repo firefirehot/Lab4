@@ -67,11 +67,11 @@ void Tick()
         break;
 	
 	case PB0TRANS:
-		PORTB = 0x01;
+		PORTB = 0x02;
 	break;
 	
 	case PB1TRANS:
-		PORTB = 0x02;
+		PORTB = 0x01;
 	break;
 
 	default:

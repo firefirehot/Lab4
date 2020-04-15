@@ -32,10 +32,10 @@ continue 2
 expectPORTC 0x07
 checkResult
 
-test "PINA: 0x01 => PORTC: 0x07"
+test "PINA: 0x01 => PORTC: 0x08"
 setPINA 0x01
 continue 2
-expectPORTC 0x07
+expectPORTC 0x08
 checkResult
 
 test "PINA: 0x00 => PORTC: 0x08"
@@ -44,10 +44,10 @@ continue 2
 expectPORTC 0x08
 checkResult
 
-test "PINA: 0x02 => PORTC: 0x08"
+test "PINA: 0x02 => PORTC: 0x07"
 setPINA 0x02
 continue 2
-expectPORTC 0x08
+expectPORTC 0x07
 checkResult
 
 test "PINA: 0x00 => PORTC: 0x07"
@@ -56,10 +56,10 @@ continue 2
 expectPORTC 0x07
 checkResult
 
-test "PINA: 0x03 => PORTC: 0x07"
+test "PINA: 0x03 => PORTC: 0x00"
 setPINA 0x03
 continue 2
-expectPORTC 0x07
+expectPORTC 0x00
 checkResult
 
 test "PINA: 0x00 => PORTC: 0x00"
